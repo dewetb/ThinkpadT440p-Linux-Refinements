@@ -9,5 +9,3 @@ In order to make the currnet tab more visible in terminal. I put the following C
 TerminalWindow .notebook tab:active {
     background-color: #9CD;
 }
-
-#Fixing palm detection http://stevenkohlmeyer.com/fixing-palm-detect-ubuntu-14-04/
