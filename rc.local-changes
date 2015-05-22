@@ -6,5 +6,5 @@ rfkill block bluetooth
 #Brightness skipped steps so there were only a few brightness levels
 echo N | sudo tee /sys/module/video/parameters/brightness_switch_enabled
 
-#Disable tap to click while typing
+#Disable tap to click while typing, this never worked great for me so I just disabled tap to click completely in the "Mouse & Touchpad" settings. The Apple track pad is the only thing I really miss from my Mac days
 syndaemon -i 4 -d -t -K
