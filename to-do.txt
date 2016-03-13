@@ -1,7 +1,0 @@
-I would like to automate the things in this file one day
-
-In order to make the currnet tab more visible in terminal. I put the following CSS in ~/.config/gtk-3.0/gtk.css
-
-TerminalWindow .notebook tab:active {
-    background-color: #9CD;
-}

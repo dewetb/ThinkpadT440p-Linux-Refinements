@@ -3,7 +3,7 @@ echo "\n First I'll try to install everything that you can walk away for \n"
 
 ######## Initial Update & Upgrade
 
-#sudo apt-get -y update
+sudo apt-get -y update
 sudo apt-get -y dist-upgrade
 sudo apt-get -y install curl
 
