@@ -1,11 +1,10 @@
-# Install everything needed to set up an Ubuntu laptop for web development
+# Install everything needed to set up an Ubuntu laptop or vm for web development
 echo "\n First I'll try to install everything that you can walk away for \n"
 
 ######## Initial Update & Upgrade
 
 sudo apt-get -y update
 sudo apt-get -y dist-upgrade
-sudo apt-get -y install curl
 
 ######## Adding Software Sources
 
@@ -14,7 +13,7 @@ cd
 sudo sh -c "echo 'deb http://apt.postgresql.org/pub/repos/apt/ precise-pgdg main' > /etc/apt/sources.list.d/pgdg.list"
 wget --quiet -O - http://apt.postgresql.org/pub/repos/apt/ACCC4CF8.asc | sudo apt-key add -
 
-sudo apt-get update
+#sudo apt-get update
 
 ######## Install Things, Starting with the Essentials
 
@@ -91,4 +90,6 @@ if [ ! -f ".ssh/id_rsa.pub" ]; then
   ssh-keygen -t rsa -C "dewet@blomerus.org"
 fi
 
+sudo apt-get -y dist-upgrade
 sudo apt-get -y autoremove
+sudo apt-get -y purge

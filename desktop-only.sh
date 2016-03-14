@@ -5,7 +5,6 @@ echo "\n First I'll try to install everything that you can walk away for \n"
 
 sudo apt-get -y update
 sudo apt-get -y dist-upgrade
-sudo apt-get -y install curl
 
 ######## Adding Software Sources
 
@@ -21,16 +20,18 @@ sudo dpkg --add-architecture i386
 
 # Skype
 sudo add-apt-repository -y "deb http://archive.canonical.com/ $(lsb_release -sc) partner"
-
 sudo add-apt-repository -y ppa:webupd8team/sublime-text-2
-
 sudo apt-get update
 
-######## Some things for Desktop only
+# This is not needed for Linux Mint
+#sudo apt-get -y ubuntu-restricted-extras vlc
+
 echo "\n Ubuntu desktop stuff unattended \n"
-sudo apt-get -y install ubuntu-restricted-extras vlc google-chrome-stable libreoffice libreoffice-core libreoffice-base sublime-text vlc nautilus-dropbox skype virtualbox
+sudo apt-get -y install google-chrome-stable libreoffice libreoffice-core libreoffice-base sublime-text skype virtualbox dropbox python-gpgme
 
 echo "\n Ubuntu Desktop stuff that needs you to choose config options to finish installing \n"
 # sudo apt-get -y install
 
+sudo apt-get -y dist-upgrade
 sudo apt-get -y autoremove
+sudo apt-get -y purge
