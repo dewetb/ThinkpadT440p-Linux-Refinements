@@ -27,7 +27,7 @@ sudo apt-get update
 #sudo apt-get -y ubuntu-restricted-extras vlc
 
 echo "\n Ubuntu desktop stuff unattended \n"
-sudo apt-get -y install google-chrome-stable libreoffice libreoffice-core libreoffice-base sublime-text skype virtualbox dropbox python-gpgme
+sudo apt-get -y install google-chrome-stable libreoffice libreoffice-core libreoffice-base sublime-text skype virtualbox dropbox python-gpgme gimp audacity klavaro
 
 echo "\n Ubuntu Desktop stuff that needs you to choose config options to finish installing \n"
 # sudo apt-get -y install
