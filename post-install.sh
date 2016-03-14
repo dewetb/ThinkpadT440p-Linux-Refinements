@@ -9,25 +9,10 @@ sudo apt-get -y install curl
 
 ######## Adding Software Sources
 
-echo "\n Adding Software Sources \n"
-# Chrome
-if [ ! -f "/etc/apt/sources.list.d/google.list" ]; then
-  wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-  sudo sh -c 'echo "\n deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
-fi
-
 # Postgres
 cd
 sudo sh -c "echo 'deb http://apt.postgresql.org/pub/repos/apt/ precise-pgdg main' > /etc/apt/sources.list.d/pgdg.list"
 wget --quiet -O - http://apt.postgresql.org/pub/repos/apt/ACCC4CF8.asc | sudo apt-key add -
-
-# Enable MultiArch for Skype
-sudo dpkg --add-architecture i386
-
-# Skype
-sudo add-apt-repository -y "deb http://archive.canonical.com/ $(lsb_release -sc) partner"
-
-sudo add-apt-repository -y ppa:webupd8team/sublime-text-2
 
 sudo apt-get update
 
@@ -98,16 +83,9 @@ echo "\n Postgres from https://gorails.com/setup/ubuntu/14.04 \n"
 sudo apt-get -y install postgresql-common
 sudo apt-get -y install postgresql-9.3 libpq-dev
 
-######## Some things for Desktop only
-echo "\n Ubuntu desktop stuff unattended \n"
-sudo apt-get -y install ubuntu-restricted-extras vlc google-chrome-stable libreoffice libreoffice-core libreoffice-base sublime-text vlc nautilus-dropbox skype virtualbox
-
 ######## Some things that require user interaction
 echo "\n Stay close, these things mibht be asking you some questions to answer \n"
 wget -O- https://toolbelt.heroku.com/install-ubuntu.sh | sh
-
-echo "\n Ubuntu Desktop stuff that needs you to choose config options to finish installing \n"
-# sudo apt-get -y install
 
 if [ ! -f ".ssh/id_rsa.pub" ]; then
   ssh-keygen -t rsa -C "dewet@blomerus.org"
