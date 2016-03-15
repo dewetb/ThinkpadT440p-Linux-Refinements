@@ -1,5 +1,2 @@
-for f in *.sh
-  do
-    ./$f
-  done
-done
+./post-install.sh
+./desktop-only.sh

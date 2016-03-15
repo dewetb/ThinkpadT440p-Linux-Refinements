@@ -24,10 +24,10 @@ sudo add-apt-repository -y ppa:webupd8team/sublime-text-2
 sudo apt-get update
 
 # This is not needed for Linux Mint
-#sudo apt-get -y ubuntu-restricted-extras vlc
+#sudo apt-get -y ubuntu-restricted-extras vlc libreoffice-base gimp
 
 echo "\n Ubuntu desktop stuff unattended \n"
-sudo apt-get -y install google-chrome-stable libreoffice libreoffice-core libreoffice-base sublime-text skype virtualbox dropbox python-gpgme gimp audacity klavaro
+sudo apt-get -y install google-chrome-stable sublime-text skype virtualbox dropbox python-gpgme audacity klavaro
 
 echo "\n Ubuntu Desktop stuff that needs you to choose config options to finish installing \n"
 # sudo apt-get -y install

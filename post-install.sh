@@ -18,7 +18,7 @@ wget --quiet -O - http://apt.postgresql.org/pub/repos/apt/ACCC4CF8.asc | sudo ap
 ######## Install Things, Starting with the Essentials
 
 echo "\n Install vim & zsh & other basics \n"
-sudo apt-get -y install vim zsh git-core git
+sudo apt-get -y install vim-nox zsh git-core git
 
 cd
 if [ ! -d ".oh-my-zsh" ]; then
@@ -44,6 +44,7 @@ if [ ! -d ".rbenv" ]; then
   git clone git://github.com/sstephenson/rbenv.git .rbenv
   echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.zshrc
   echo 'eval "$(rbenv init -)"' >> ~/.zshrc
+# This next command exits the script! Figure out what it does & work around it
   exec $SHELL
 
   git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
@@ -76,7 +77,7 @@ git config --global user.name "De Wet"
 git config --global user.email "dewet@blomerus.org"
 
 echo "\n Servers, databases & other misc web development stuff \n"
-sudo apt-get -y install silversearcher-ag redis-server nginx apache2-utils phantomjs
+sudo apt-get -y install silversearcher-ag redis-server nginx apache2-utils phantomjs traceroute
 
 echo "\n Postgres from https://gorails.com/setup/ubuntu/14.04 \n"
 sudo apt-get -y install postgresql-common
