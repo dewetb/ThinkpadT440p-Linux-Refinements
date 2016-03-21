@@ -78,7 +78,7 @@ git config --global user.email "dewet@blomerus.org"
 git config --global push.default simple
 
 echo "\n Servers, databases & other misc web development stuff \n"
-sudo apt-get -y install silversearcher-ag redis-server nginx apache2-utils phantomjs traceroute
+sudo apt-get -y install silversearcher-ag redis-server nginx apache2-utils phantomjs traceroute graphicsmagick
 
 echo "\n Postgres from https://gorails.com/setup/ubuntu/14.04 \n"
 sudo apt-get -y install postgresql-common
