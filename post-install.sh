@@ -92,6 +92,7 @@ wget -O- https://toolbelt.heroku.com/install-ubuntu.sh | sh
 if [ ! -f ".ssh/id_rsa.pub" ]; then
   ssh-keygen -t rsa -C "dewet@blomerus.org"
 fi
+echo '--color' >> ~/.rspec
 
 sudo apt-get -y dist-upgrade
 sudo apt-get -y autoremove
