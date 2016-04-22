@@ -34,7 +34,7 @@ else
   cd -
 fi
 
-######## Install Ruby & Rails
+######## Install Ruby & Rails Dependencies
 
 echo  "\n Instal Ruby dependencies from https://gorails.com/setup/ubuntu/14.04 \n"
 sudo apt-get -y install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev nodejs librtmp-dev
@@ -45,30 +45,11 @@ if [ ! -d ".rbenv" ]; then
   echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.zshrc
   echo 'eval "$(rbenv init -)"' >> ~/.zshrc
 # This next command exits the script! Figure out what it does & work around it
-  exec $SHELL
 
   git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
   echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.zshrc
-  exec $SHELL
 
   git clone https://github.com/sstephenson/rbenv-gem-rehash.git ~/.rbenv/plugins/rbenv-gem-rehash
-
-  rbenv install 2.3.0
-  rbenv global 2.3.0
-  echo "\n Next command should display ruby 2.3.0"
-  ruby -v
-
-  echo "gem: --no-ri --no-rdoc" > ~/.gemrc
-  gem install bundler
-
-  curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
-
-  gem install rails -v 4.2.4
-
-  rbenv rehash
-
-  echo "\n Next command should display Rails 4.2.4"
-  rails -v
 fi
 
 echo "\n configuring Git \n"
