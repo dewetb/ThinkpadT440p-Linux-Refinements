@@ -27,7 +27,7 @@ sudo apt-get update
 #sudo apt-get -y ubuntu-restricted-extras vlc libreoffice-base gimp
 
 echo "\n apt-get install stuff \n"
-sudo apt-get -y install google-chrome-stable sublime-text skype virtualbox dropbox python-gpgme audacity klavaro git-gui sudo apt-get install virtualbox-5.0
+sudo apt-get -y install google-chrome-stable sublime-text skype virtualbox dropbox python-gpgme audacity klavaro git-gui virtualbox-5.0
 
 sudo apt-get -y dist-upgrade
 sudo apt-get -y autoremove
