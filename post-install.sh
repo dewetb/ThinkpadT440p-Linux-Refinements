@@ -6,20 +6,20 @@ echo "\n First I'll try to install everything that you can walk away for \n"
 sudo apt-get -y update
 sudo apt-get -y dist-upgrade
 
-######## Adding Software Sources
-
-# Postgres
-cd
-sudo sh -c "echo 'deb http://apt.postgresql.org/pub/repos/apt/ precise-pgdg main' > /etc/apt/sources.list.d/pgdg.list"
-wget --quiet -O - http://apt.postgresql.org/pub/repos/apt/ACCC4CF8.asc | sudo apt-key add -
-
-#sudo apt-get update
-
-######## Install Things, Starting with the Essentials
-
+######## apt-get install Everything that don't need additional software sources added
 echo "\n Install vim & zsh & other basics \n"
 sudo apt-get -y install vim-nox zsh git-core git curl
 
+echo  "\n Instal Ruby dependencies from https://gorails.com/setup/ubuntu/14.04 \n"
+sudo apt-get -y install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev nodejs librtmp-dev
+
+echo "\n Postgres from https://gorails.com/setup/ubuntu/14.04 \n"
+sudo apt-get -y install postgresql-common postgresql-9.3 libpq-dev
+
+echo "\n Servers, databases & other misc web development stuff \n"
+sudo apt-get -y install silversearcher-ag redis-server nginx apache2-utils phantomjs traceroute graphicsmagick
+
+######## Install things with clone, curl or wget
 cd
 if [ ! -d ".oh-my-zsh" ]; then
   sudo curl -L http://install.ohmyz.sh | sh
@@ -36,10 +36,6 @@ fi
 
 ######## Install Ruby & Rails Dependencies
 
-echo  "\n Instal Ruby dependencies from https://gorails.com/setup/ubuntu/14.04 \n"
-sudo apt-get -y install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev nodejs librtmp-dev
-cd
-
 if [ ! -d ".rbenv" ]; then
   git clone git://github.com/sstephenson/rbenv.git .rbenv
   echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.zshrc
@@ -51,19 +47,13 @@ if [ ! -d ".rbenv" ]; then
   git clone https://github.com/sstephenson/rbenv-gem-rehash.git ~/.rbenv/plugins/rbenv-gem-rehash
 fi
 
-echo "\n configuring Git \n"
+###### Configure Git
+echo "\n Configuring Git \n"
 git config --global color.ui true
 git config --global user.name "De Wet"
 git config --global user.email "dewet@blomerus.org"
 git config --global push.default simple
 git config --global core.editor "vim"
-
-echo "\n Servers, databases & other misc web development stuff \n"
-sudo apt-get -y install silversearcher-ag redis-server nginx apache2-utils phantomjs traceroute graphicsmagick
-
-echo "\n Postgres from https://gorails.com/setup/ubuntu/14.04 \n"
-sudo apt-get -y install postgresql-common
-sudo apt-get -y install postgresql-9.3 libpq-dev
 
 ######## Some things that require user interaction
 echo "\n Stay close, these things mibht be asking you some questions to answer \n"
