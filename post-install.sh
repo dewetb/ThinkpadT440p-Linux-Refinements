@@ -18,7 +18,7 @@ wget --quiet -O - http://apt.postgresql.org/pub/repos/apt/ACCC4CF8.asc | sudo ap
 ######## Install Things, Starting with the Essentials
 
 echo "\n Install vim & zsh & other basics \n"
-sudo apt-get -y install vim-nox zsh git-core git
+sudo apt-get -y install vim-nox zsh git-core git curl
 
 cd
 if [ ! -d ".oh-my-zsh" ]; then
@@ -44,7 +44,6 @@ if [ ! -d ".rbenv" ]; then
   git clone git://github.com/sstephenson/rbenv.git .rbenv
   echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.zshrc
   echo 'eval "$(rbenv init -)"' >> ~/.zshrc
-# This next command exits the script! Figure out what it does & work around it
 
   git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
   echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.zshrc
