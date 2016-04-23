@@ -21,6 +21,7 @@ sudo apt-get -y install silversearcher-ag redis-server nginx apache2-utils phant
 
 ######## Install things with clone, curl or wget
 cd
+
 if [ ! -d ".oh-my-zsh" ]; then
   sudo curl -L http://install.ohmyz.sh | sh
   chsh -s `which zsh`
@@ -28,7 +29,7 @@ fi
 
 # Vundle
 if [ ! -d ~/.vim/bundle/Vundle.vim ]; then
-  git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+  git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 else
   cd ~/.vim/bundle/Vundle.vim && git pull
   cd -
