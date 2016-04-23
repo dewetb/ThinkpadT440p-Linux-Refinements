@@ -27,7 +27,7 @@ sudo apt-get update
 #sudo apt-get -y ubuntu-restricted-extras vlc libreoffice-base gimp
 
 echo "\n Ubuntu desktop stuff unattended \n"
-sudo apt-get -y install google-chrome-stable sublime-text skype virtualbox dropbox python-gpgme audacity klavaro git-gui
+sudo apt-get -y install google-chrome-stable sublime-text skype virtualbox dropbox python-gpgme audacity klavaro git-gui sudo apt-get install virtualbox-5.0
 
 echo "\n Ubuntu Desktop stuff that needs you to choose config options to finish installing \n"
 # sudo apt-get -y install
