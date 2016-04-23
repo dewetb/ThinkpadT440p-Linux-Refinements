@@ -15,11 +15,6 @@ if [ ! -f "/etc/apt/sources.list.d/google.list" ]; then
   sudo sh -c 'echo "\n deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
 fi
 
-# Enable MultiArch for Skype
-sudo dpkg --add-architecture i386
-
-# Skype
-sudo add-apt-repository -y "deb http://archive.canonical.com/ $(lsb_release -sc) partner"
 sudo add-apt-repository -y ppa:webupd8team/sublime-text-2
 sudo apt-get update
 
@@ -27,7 +22,7 @@ sudo apt-get update
 #sudo apt-get -y ubuntu-restricted-extras vlc libreoffice-base gimp
 
 echo "\n apt-get install stuff \n"
-sudo apt-get -y install google-chrome-stable sublime-text skype virtualbox dropbox python-gpgme audacity klavaro git-gui virtualbox-5.0
+sudo apt-get -y install google-chrome-stable sublime-text skype dropbox python-gpgme audacity klavaro git-gui virtualbox-5.0
 
 sudo apt-get -y dist-upgrade
 sudo apt-get -y autoremove
