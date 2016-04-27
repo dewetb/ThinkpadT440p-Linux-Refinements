@@ -68,3 +68,4 @@ echo '--color' >> ~/.rspec
 sudo apt-get -y dist-upgrade
 sudo apt-get -y autoremove
 sudo apt-get -y purge
+sudo reboot
