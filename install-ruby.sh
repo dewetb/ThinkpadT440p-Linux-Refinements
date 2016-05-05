@@ -1,7 +1,7 @@
 ######## Install Ruby & Rails
 
-rbenv install 2.3.0
-rbenv global 2.3.0
+rbenv install 2.3.1
+rbenv global 2.3.1
 echo "\n Next command should display ruby 2.3.0"
 ruby -v
 
