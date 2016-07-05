@@ -10,11 +10,14 @@ sudo apt-get -y dist-upgrade
 echo "\n Install vim & zsh & other basics \n"
 sudo apt-get -y install vim-nox zsh git-core git curl
 
-echo  "\n Instal Ruby dependencies from https://gorails.com/setup/ubuntu/14.04 \n"
-sudo apt-get -y install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev nodejs librtmp-dev
+echo  "\n Instal Ruby dependencies from https://gorails.com/setup/ubuntu/16.04 \n"
+sudo apt-get install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev
 
-echo "\n Postgres from https://gorails.com/setup/ubuntu/14.04 \n"
-sudo apt-get -y install postgresql-common postgresql-9.3 libpq-dev
+echo "\n Postgres from https://gorails.com/setup/ubuntu/16.04 \n"
+sudo sh -c "echo 'deb http://apt.postgresql.org/pub/repos/apt/ xenial-pgdg main' > /etc/apt/sources.list.d/pgdg.list"
+wget --quiet -O - http://apt.postgresql.org/pub/repos/apt/ACCC4CF8.asc | sudo apt-key add -
+sudo apt-get -y update
+sudo apt-get -y install postgresql-common postgresql-9.5 libpq-dev
 
 echo "\n Servers, databases & other misc web development stuff \n"
 sudo apt-get -y install silversearcher-ag redis-server nginx apache2-utils phantomjs traceroute graphicsmagick python-pip mysql-client libmysqlclient-dev
