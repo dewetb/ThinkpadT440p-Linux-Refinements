@@ -11,7 +11,7 @@ echo "\n Install vim & zsh & other basics \n"
 sudo apt-get -y install vim-nox zsh git-core git curl
 
 echo  "\n Instal Ruby dependencies from https://gorails.com/setup/ubuntu/16.04 \n"
-sudo apt-get install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev
+sudo apt-get -y install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev
 
 echo "\n Postgres from https://gorails.com/setup/ubuntu/16.04 \n"
 sudo sh -c "echo 'deb http://apt.postgresql.org/pub/repos/apt/ xenial-pgdg main' > /etc/apt/sources.list.d/pgdg.list"
