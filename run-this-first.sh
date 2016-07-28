@@ -20,7 +20,7 @@ sudo apt-get -y update
 sudo apt-get -y install postgresql-common postgresql-9.5 libpq-dev
 
 echo "\n Servers, databases & other misc web development stuff \n"
-sudo apt-get -y install silversearcher-ag redis-server nginx apache2-utils phantomjs traceroute graphicsmagick python-pip mysql-client libmysqlclient-dev
+sudo apt-get -y install silversearcher-ag redis-server nginx apache2-utils phantomjs traceroute graphicsmagick python-pip mysql-client libmysqlclient-dev cmake
 
 ######## Install things with clone, curl or wget
 cd

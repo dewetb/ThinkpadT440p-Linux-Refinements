@@ -17,17 +17,13 @@ fi
 
 sudo add-apt-repository -y ppa:webupd8team/atom
 
-sudo sh -c "echo 'deb http://download.virtualbox.org/virtualbox/debian xenial contrib non-free' >> /etc/apt/sources.list.d/virtualbox.list"
-
-wget -q http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc -O- | sudo apt-key add -
-
 sudo apt-get update
 
 # This is not needed for Linux Mint
 #sudo apt-get -y ubuntu-restricted-extras vlc libreoffice-base gimp
 
 echo "\n apt-get install stuff \n"
-sudo apt-get -y install google-chrome-stable skype dropbox audacity klavaro git-gui atom virtualbox-5.0
+sudo apt-get -y install google-chrome-stable skype dropbox audacity klavaro git-gui atom
 
 sudo apt-get -y dist-upgrade
 sudo apt-get -y autoremove
