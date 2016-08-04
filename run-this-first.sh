@@ -51,6 +51,13 @@ if [ ! -d ".rbenv" ]; then
   git clone https://github.com/sstephenson/rbenv-gem-rehash.git ~/.rbenv/plugins/rbenv-gem-rehash
 fi
 
+###### Install Tmate
+
+sudo apt-get -y install software-properties-common && \
+sudo add-apt-repository ppa:tmate.io/archive    && \
+sudo apt-get -y update                             && \
+sudo apt-get -y install tmate
+
 ###### Configure Git
 echo "\n Configuring Git \n"
 git config --global color.ui true
